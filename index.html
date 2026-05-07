@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadLux SC - IA para Corretores Premium de SC</title>
+    <meta name="description" content="A IA que detecta seus compradores reais, cria conteúdo premium e automatiza vendas. Para corretores de Itapema e Porto Belo.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(to right, #f59e0b, #d97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .scroll-smooth { scroll-behavior: smooth; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        nav.scrolled {
+            background: rgba(0,0,0,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #1f2937;
+        }
+    </style>
+</head>
+<body class="bg-black text-white scroll-smooth">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-gradient-to-br from-amber-500 to-amber-600 rounded-lg flex items-center justify-center text-black font-bold text-sm">L</div>
+                    <span class="text-xl font-semibold tracking-tight">LeadLux SC</span>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#beneficios" class="text-sm text-gray-400 hover:text-white transition">Benefícios</a>
+                    <a href="#como-funciona" class="text-sm text-gray-400 hover:text-white transition">Como funciona</a>
+                    <a href="#prova-social" class="text-sm text-gray-400 hover:text-white transition">Clientes</a>
+                    <a href="#planos" class="text-sm text-gray-400 hover:text-white transition">Planos</a>
+                    <a href="#planos" class="px-6 py-2 bg-amber-500 hover:bg-amber-600 text-black rounded-lg font-semibold text-sm transition transform hover:scale-105">
+                        Teste grátis
+                    </a>
+                </div>
+                <button onclick="toggleMenu()" class="md:hidden text-white">
+                    <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden fixed top-16 left-0 right-0 bg-black border-b border-gray-800 p-4 z-40">
+        <div class="flex flex-col gap-4">
+            <a href="#beneficios" onclick="toggleMenu()" class="text-sm text-gray-400 hover:text-white">Benefícios</a>
+            <a href="#como-funciona" onclick="toggleMenu()" class="text-sm text-gray-400 hover:text-white">Como funciona</a>
+            <a href="#prova-social" onclick="toggleMenu()" class="text-sm text-gray-400 hover:text-white">Clientes</a>
+            <a href="#planos" onclick="toggleMenu()" class="text-sm text-gray-400 hover:text-white">Planos</a>
+            <a href="#planos" onclick="toggleMenu()" class="w-full text-center px-6 py-2 bg-amber-500 hover:bg-amber-600 text-black rounded-lg font-semibold text-sm transition">
+                Teste grátis
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-block mb-6 px-4 py-2 bg-gray-900 border border-gray-800 rounded-full text-sm text-amber-500 font-medium">
+                    🚀 Powered by IA | Já ajudando +120 corretores
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    Enquanto você<br>
+                    <span class="gradient-text">perde tempo com curiosos</span><br>
+                    outros corretores<br>
+                    fecham vendas com IA.
+                </h1>
+                
+                <p class="text-xl text-gray-400 mb-8 leading-relaxed">
+                    A IA do LeadLux encontra seus compradores reais, cria conteúdo premium, automatiza follow-up e organiza tudo. Enquanto você dorme.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                    <a href="#planos" class="px-8 py-4 bg-amber-500 hover:bg-amber-600 text-black rounded-lg font-semibold text-lg transition transform hover:scale-105 flex items-center justify-center gap-2">
+                        Teste grátis 14 dias
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    <a href="https://wa.me/5547999999999?text=Quero%20saber%20mais%20sobre%20o%20LeadLux%20SC" target="_blank" class="px-8 py-4 border border-gray-700 hover:border-amber-500 text-white rounded-lg font-semibold text-lg transition flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        WhatsApp
+                    </a>
+                </div>
+
+                <div class="flex items-center gap-4 text-sm text-gray-400">
+                    <div class="flex -space-x-2">
+                        <div class="w-8 h-8 bg-gradient-to-br from-amber-500 to-gray-700 rounded-full border border-black"></div>
+                        <div class="w-8 h-8 bg-gradient-to-br from-amber-500 to-gray-700 rounded-full border border-black"></div>
+                        <div class="w-8 h-8 bg-gradient-to-br from-amber-500 to-gray-700 rounded-full border border-black"></div>
+                        <div class="w-8 h-8 bg-gradient-to-br from-amber-500 to-gray-700 rounded-full border border-black"></div>
+                    </div>
+                    <p>+120 corretores já gerando mais vendas</p>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="aspect-square bg-gradient-to-br from-gray-900 via-black to-gray-900 border border-gray-800 rounded-2xl p-8 flex flex-col justify-between animate-float">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-2 text-amber-500 text-sm font-semibold">
+                            ⚡ IA DETECTANDO LEADS
+                        </div>
+                        <div class="bg-gray-900 p-4 rounded-lg border border-gray-800">
+                            <p class="text-gray-500 text-xs mb-2">LEAD DETECTADO AGORA</p>
+                            <p class="text-white font-semibold">João Silva</p>
+                            <p class="text-gray-400 text-sm">Visitou "Casarão Praia" 8 vezes esta semana</p>
+                            <p class="text-amber-500 text-xs mt-2">QUALIFICAÇÃO: 94%</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="bg-green-900 bg-opacity-20 border border-green-800 px-4 py-3 rounded-lg flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <div>
+                                <p class="text-white text-sm font-semibold">Follow-up automático</p>
+                                <p class="text-green-400 text-xs">Mensagem enviada para João</p>
+                            </div>
+                        </div>
+                        <div class="text-center text-gray-500 text-xs">
+                            ✨ Tudo aconteceu em 47 segundos
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-900 bg-opacity-30 border-y border-gray-800">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-center">As dores que você vive todo dia</h2>
+            <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto">
+                Você não é o único. Esses problemas matam a produtividade de 9 em cada 10 corretores. LeadLux resolve todos de uma vez.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-amber-500 transition">
+                    <div class="text-3xl mb-4">📉</div>
+                    <h3 class="font-bold text-lg mb-3">Leads frios que somem</h3>
+                    <p class="text-gray-400">Bate papo inicial. Depois? Silêncio. Enquanto isso, você perde oportunidades de comissão.</p>
+                </div>
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-amber-500 transition">
+                    <div class="text-3xl mb-4">🌊</div>
+                    <h3 class="font-bold text-lg mb-3">Excesso de concorrência</h3>
+                    <p class="text-gray-400">Inúmeros corretores vendendo a mesma coisa. Como se diferenciar?</p>
+                </div>
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-amber-500 transition">
+                    <div class="text-3xl mb-4">⏰</div>
+                    <h3 class="font-bold text-lg mb-3">Tempo que não existe</h3>
+                    <p class="text-gray-400">Criar conteúdo, fazer follow-up, buscar leads. Impossível fazer tudo sozinho.</p>
+                </div>
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-amber-500 transition">
+                    <div class="text-3xl mb-4">📱</div>
+                    <h3 class="font-bold text-lg mb-3">Dependência do Instagram</h3>
+                    <p class="text-gray-400">Algoritmo muda. Seu alcance cai. Sua geração de leads desaparece.</p>
+                </div>
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-amber-500 transition">
+                    <div class="text-3xl mb-4">😰</div>
+                    <h3 class="font-bold text-lg mb-3">Ansiedade por fechamento</h3>
+                    <p class="text-gray-400">Você quer vender MAIS. Mas não sabe por onde começar.</p>
+                </div>
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-amber-500 transition">
+                    <div class="text-3xl mb-4">🎯</div>
+                    <h3 class="font-bold text-lg mb-3">Dificuldade em diferenciar-se</h3>
+                    <p class="text-gray-400">Todos os corretores fazem a mesma coisa. Você é apenas mais um.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-center">Aqui vem a solução</h2>
+        <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto">
+            LeadLux é a primeira plataforma que combina IA, automação e inteligência de mercado. Tudo integrado. Tudo funcionando. Tudo gerando vendas.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+            <div class="space-y-6">
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+                    <div class="w-12 h-12 bg-amber-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-4 text-2xl">🤖</div>
+                    <h3 class="font-bold text-xl mb-3">IA encontra compradores reais</h3>
+                    <p class="text-gray-400">Analisa interações, histórico de navegação e comportamento. Identifica quem QUER comprar (não apenas quem "tá vendo").</p>
+                </div>
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+                    <div class="w-12 h-12 bg-amber-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-4 text-2xl">✍️</div>
+                    <h3 class="font-bold text-xl mb-3">Conteúdo premium automático</h3>
+                    <p class="text-gray-400">IA cria posts em minutos, não horas. Seu Instagram fica ativo, você fica rico. Autoridade no piloto automático.</p>
+                </div>
+            </div>
+
+            <div class="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 border border-gray-800 rounded-2xl p-8 aspect-square flex flex-col justify-center">
+                <div class="space-y-4 text-center">
+                    <div class="text-6xl font-bold text-amber-500">3X</div>
+                    <p class="text-gray-400">Mais leads em 30 dias</p>
+                    <div class="w-full h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent"></div>
+                    <div class="pt-4 space-y-3">
+                        <p class="text-gray-400 text-sm">Média comprovada em nossos clientes</p>
+                        <p class="text-xs text-gray-500">Fonte: dados coletados Jan-Apr 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 border border-gray-800 rounded-2xl p-8 aspect-square flex flex-col justify-center order-2 md:order-1">
+                <div class="space-y-4">
+                    <div class="bg-gray-800 p-4 rounded-lg text-sm">
+                        <p class="text-gray-500 mb-2">WhatsApp → João Silva</p>
+                        <p class="text-white">E aí! Vi que você está muito interessado no Casarão Praia. Tenho 2 outros na mesma localização. Conversamos?</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg text-sm">
+                        <p class="text-gray-500 mb-2">Automação inteligente</p>
+                        <p class="text-gray-400 text-xs">Enviado em tempo ideal + follow-up agendado</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6 order-1 md:order-2">
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+                    <div class="w-12 h-12 bg-amber-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-4 text-2xl">💬</div>
+                    <h3 class="font-bold text-xl mb-3">Follow-up automático no WhatsApp</h3>
+                    <p class="text-gray-400">Mensagens inteligentes em tempo perfeito. Não assustam. Vendem. Sem você gastar 2 horas digitando.</p>
+                </div>
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+                    <div class="w-12 h-12 bg-amber-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-4 text-2xl">📊</div>
+                    <h3 class="font-bold text-xl mb-3">Painel inteligente em tempo real</h3>
+                    <p class="text-gray-400">Vê tudo de uma tela. Quem são seus melhores leads, qual imóvel tá "quente", quanto já ganhou este mês.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="como-funciona" class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-900 bg-opacity-30 border-y border-gray-800">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-center">Como funciona em 4 passos</h2>
+            <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto">
+                Simples demais? Sim. Rápido demais? Também. Assim funciona a IA.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 text-center">
+                    <div class="w-16 h-16 bg-amber-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-amber-500">01</div>
+                    <h3 class="font-bold text-lg mb-2">Conecte Instagram</h3>
+                    <p class="text-gray-400 text-sm">Link sua conta em 30 segundos</p>
+                </div>
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 text-center">
+                    <div class="w-16 h-16 bg-amber-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-amber-500">02</div>
+                    <h3 class="font-bold text-lg mb-2">IA encontra compradores</h3>
+                    <p class="text-gray-400 text-sm">Análise automática de leads</p>
+                </div>
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 text-center">
+                    <div class="w-16 h-16 bg-amber-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-amber-500">03</div>
+                    <h3 class="font-bold text-lg mb-2">Receba alertas</h3>
+                    <p class="text-gray-400 text-sm">Notificação de lead quente</p>
+                </div>
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 text-center">
+                    <div class="w-16 h-16 bg-amber-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-amber-500">04</div>
+                    <h3 class="font-bold text-lg mb-2">Feche mais vendas</h3>
+                    <p class="text-gray-400 text-sm">Follow-up automático gera venda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="beneficios" class="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-center">O que você ganha</h2>
+        <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto">
+            Não é só sobre tecnologia. É sobre sua vida melhorar em 30 dias.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 hover:border-amber-500 transition">
+                <div class="text-amber-500 mb-4 text-3xl">⚡</div>
+                <h3 class="font-bold text-lg mb-3">Mais leads qualificados</h3>
+                <p class="text-gray-400">A IA identifica compradores reais, não curiosos. Seu tempo vale mais.</p>
+            </div>
+            <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 hover:border-amber-500 transition">
+                <div class="text-amber-500 mb-4 text-3xl">📈</div>
+                <h3 class="font-bold text-lg mb-3">Aumento de conversão</h3>
+                <p class="text-gray-400">35% mais vendas fechadas com follow-up inteligente.</p>
+            </div>
+            <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 hover:border-amber-500 transition">
+                <div class="text-amber-500 mb-4 text-3xl">⏱️</div>
+                <h3 class="font-bold text-lg mb-3">Economia de tempo</h3>
+                <p class="text-gray-400">8+ horas de trabalho manual economizadas por semana.</p>
+            </div>
+            <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 hover:border-amber-500 transition">
+                <div class="text-amber-500 mb-4 text-3xl">🛡️</div>
+                <h3 class="font-bold text-lg mb-3">Autoridade digital imediata</h3>
+                <p class="text-gray-400">Conteúdo premium automático. Você aparenta ser maior que é.</p>
+            </div>
+            <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 hover:border-amber-500 transition">
+                <div class="text-amber-500 mb-4 text-3xl">🎯</div>
+                <h3 class="font-bold text-lg mb-3">Vantagem competitiva</h3>
+                <p class="text-gray-400">Enquanto outros corretores dormem, você está gerando vendas.</p>
+            </div>
+            <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 hover:border-amber-500 transition">
+                <div class="text-amber-500 mb-4 text-3xl">😌</div>
+                <h3 class="font-bold text-lg mb-3">Menos ansiedade</h3>
+                <p class="text-gray-400">Sistema automático = resultados previsíveis. Você dorme melhor.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="prova-social" class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-900 bg-opacity-30 border-y border-gray-800">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-center">Quem já está usando</h2>
+            <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto">
+                Não acredite em mim. Acredite nos números reais.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-xl p-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 bg-amber-500 bg-opacity-20 rounded-full flex items-center justify-center text-2xl">👨‍💼</div>
+                        <div>
+                            <p class="font-bold">Marco Vieira</p>
+                            <p class="text-gray-400 text-sm">Corretor Premium - Itapema</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"Passei de 2 vendas/mês para 7. A IA encontra os compradores antes que eu perceba que estão olhando."</p>
+                    <div class="pt-6 border-t border-gray-800">
+                        <p class="text-amber-500 font-bold text-lg">+250% de vendas</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-xl p-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 bg-amber-500 bg-opacity-20 rounded-full flex items-center justify-center text-2xl">👩‍💼</div>
+                        <div>
+                            <p class="font-bold">Beatriz Costa</p>
+                            <p class="text-gray-400 text-sm">Imobiliária - Porto Belo</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"Meus corretores economizam 10 horas/semana. A produtividade subiu 40%. Era impossível sem isso."</p>
+                    <div class="pt-6 border-t border-gray-800">
+                        <p class="text-amber-500 font-bold text-lg">+40% produtividade</p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-xl p-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 bg-amber-500 bg-opacity-20 rounded-full flex items-center justify-center text-2xl">👨‍💼</div>
+                        <div>
+                            <p class="font-bold">Felipe Santos</p>
+                            <p class="text-gray-400 text-sm">Especialista em Condomínios</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"O follow-up automático fecha sozinho. Vendi 3 imóveis enquanto dormia. Sério."</p>
+                    <div class="pt-6 border-t border-gray-800">
+                        <p class="text-amber-500 font-bold text-lg">3 vendas em 72h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="planos" class="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-center">Escolha seu plano</h2>
+        <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto">
+            Todos incluem IA, automação e suporte. Só muda o que você ganha com cada um.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <!-- Starter -->
+            <div class="relative rounded-2xl bg-gray-900 border border-gray-800 p-8 transition transform hover:scale-105">
+                <h3 class="text-2xl font-bold mb-2">Starter</h3>
+                <p class="text-gray-400 text-sm mb-6">Perfeito para começar</p>
+                <div class="mb-8">
+                    <span class="text-5xl font-bold">R$197</span>
+                    <span class="text-gray-400 text-sm ml-2">/mês</span>
+                </div>
+                <a href="https://wa.me/5547999999999?text=Quero%20o%20plano%20Starter" target="_blank" class="block w-full text-center py-3 rounded-lg font-bold mb-8 transition border border-gray-700 hover:border-amber-500 text-white">Comece agora</a>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-0.5">✓</span>
+                        <span class="text-gray-300 text-sm">IA detectando leads automaticamente</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-0.5">✓</span>
+                        <span class="text-gray-300 text-sm">Até 50 leads/mês</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-0.5">✓</span>
+                        <span class="text-gray-300 text-sm">Conteúdo básico Instagram (1x semana)</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-0.5">✓</span>
+                        <span class="text-gray-300 text-sm">Follow-up WhatsApp simples</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-0.5">✓</span>
+                        <span class="text-gray-300 text-sm">Dashboard essencial</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pro (Highlighted) -->
+            <div class="relative rounded-2xl bg-gradient-to-br from-gray-900 to-black border-2 border-amber-500 shadow-2xl shadow-amber-500/20 md:scale-105 p-8 transition transform hover:scale-110">
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-amber-500 text-black px-6 py-2 rounded-full text-xs font-bold">
+                    MAIS POPULAR
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Pro</h3>
+                <p class="text-gray-400 text-sm mb-6">Mais vendas. Mais rápido.</p>
+                <div class="mb-8">
+                    <span class="text-5xl font-bold">R$497</span>
+                    <span class="text-gray-400 text-sm ml-2">/mês</span>
+                </div>
+                <a href="https://wa.me/5547999999999?text=Quero%20o%20plano%20Pro" target="_blank" class="block w-full text-center py-3 rounded-lg font-bold mb-8 transition bg-amber-500 hover:bg-amber-600 text-black">Ativar teste grátis</a>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-0.5">✓</span>
+                        <span class="text-gray-300 text-sm">IA detectando leads em tempo real</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-0.5">✓</span>
+                        <span class="text-gray-300 text-sm">Leads ilimitados</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-0.5">✓</span>
+                        <span class="text-gray-300 text-sm">Conteúdo premium Instagram (3x semana)</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-0.5">✓</span>
+                        <span class="text-gray-300 text-sm">Automação inteligente WhatsApp</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-0.5">✓</span>
+                        <span class="text-gray-300 text-sm">Dashboard avançado + alertas</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-0.5">✓</span>
+                        <span class="text-gray-300 text-sm">Análise de concorrência</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-0.5">✓</span>
+                        <span class="text-gray-300 text-sm">Suporte prioritário</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elite -->
+            <div class="relative rounded-2xl bg-gray-900 border border-gray-800 p-8 transition transform hover:scale-105">
+                <h3 class="text-2xl font-bold mb-2">Elite</h3>
+                <p class="text-gray-400 text-sm mb-6">Para quem quer dominar</p>
+                <div class="mb-8">
+                    <span class="text-5xl font-bold">R$997</span>
+                    <span class="text-gray-400 text-sm ml-2">/mês</span>
+                </div>
+                <a href="https://wa.me/5547999999999?text=Quero%20o%20plano%20Elite" target="_blank" class="block w-full text-center py-3 rounded-lg font-bold mb-8 transition border border-gray-700 hover:border-amber-500 text-white">Agendar demo</a>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-0.5">✓</span>
+                        <span class="text-gray-300 text-sm">Tudo no Pro, mais:</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-0.5">✓</span>
+                        <span class="text-gray-300 text-sm">IA customizada para seu nicho</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-0.5">✓</span>
+                        <span class="text-gray-300 text-sm">Análise preditiva de vendas</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-0.5">✓</span>
+                        <span class="text-gray-300 text-sm">Estratégia mensal personalizada</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-0.5">✓</span>
+                        <span class="text-gray-300 text-sm">Integração CRM (opcional)</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-0.5">✓</span>
+                        <span class="text-gray-300 text-sm">Coaching de conversão</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-0.5">✓</span>
+                        <span class="text-gray-300 text-sm">Consultoria exclusiva</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 text-center">
+            <p class="text-gray-400 mb-2">Todas as versões incluem:</p>
+            <p class="text-white font-semibold">Teste grátis 14 dias. Sem cartão de crédito. Sem compromisso.</p>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900 via-black to-gray-900 border-y border-gray-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-6">
+                O mercado mudou.<br>
+                <span class="gradient-text">Quem usa IA fecha primeiro.</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                Você pode continuar fazendo tudo manualmente. Ou pode começar agora e estar 3 meses à frente de seus concorrentes.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#planos" class="px-12 py-4 bg-amber-500 hover:bg-amber-600 text-black rounded-lg font-bold text-lg transition transform hover:scale-105 flex items-center justify-center gap-2">
+                    Comece o teste grátis
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="https://wa.me/5547999999999?text=Quero%20saber%20mais%20sobre%20o%20LeadLux%20SC" target="_blank" class="px-12 py-4 border border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-black rounded-lg font-bold text-lg transition">
+                    Fale com um especialista
+                </a>
+            </div>
+
+            <p class="text-gray-500 text-sm mt-8">
+                ✨ Primeiros 50 usuários ganham 1 mês grátis no plano Pro
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-amber-500 to-amber-600 rounded-lg flex items-center justify-center text-black font-bold">L</div>
+                        <span class="font-bold">LeadLux SC</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">IA para corretores que querem vender MAIS.</p>
+                </div>
+                <div>
+                    <p class="font-bold mb-4 text-sm">Produto</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#beneficios" class="hover:text-white transition">Benefícios</a></li>
+                        <li><a href="#planos" class="hover:text-white transition">Preços</a></li>
+                        <li><a href="#prova-social" class="hover:text-white transition">Casos de uso</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-bold mb-4 text-sm">Empresa</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Sobre</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="https://wa.me/5547999999999" target="_blank" class="hover:text-white transition">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-bold mb-4 text-sm">Legal</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Privacidade</a></li>
+                        <li><a href="#" class="hover:text-white transition">Termos</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                    <p>&copy; 2024 LeadLux SC. Todos os direitos reservados.</p>
+                    <div class="flex gap-4 mt-4 md:mt-0">
+                        <a href="#" class="hover:text-white transition">Instagram</a>
+                        <a href="https://wa.me/5547999999999" target="_blank" class="hover:text-white transition">WhatsApp</a>
+                        <a href="#" class="hover:text-white transition">Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5547999999999?text=Quero%20saber%20mais%20sobre%20o%20LeadLux%20SC" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg text-2xl transition transform hover:scale-110 z-40">
+        💬
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Sticky navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>
